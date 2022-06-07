@@ -1,0 +1,18 @@
+<mat-toolbar color="" style="background-color:#C9C794">    
+    <span>Dashboard Estudiantes</span>
+    <span class="toolbar-spacer"></span>
+    <span class="fs-6"> {{ time | async | date:'full' }}</span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="icon-button with a menu" matTooltip="Opciones">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item disabled>
+          <mat-icon>person</mat-icon>
+          <span>{{ user.username }}</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>logout</mat-icon>
+          <span>Cerrar Sesión</span>
+        </button>
+    </mat-menu>
+</mat-toolbar>
